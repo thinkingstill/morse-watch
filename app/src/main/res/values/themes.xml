@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 不引 AppCompat：纯 android.app.Activity + 系统 Material，保持 APK 与内存占用最小 -->
+    <style name="Theme.WearMos" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

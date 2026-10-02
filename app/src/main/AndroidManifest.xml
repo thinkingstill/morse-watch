@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 唯一需要的权限：震动反馈（加速度计与扬声器均免权限） -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.type.watch"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.WearMos">
+
+        <!-- 敲击台仍是桌面入口：它是主功能，不该被一层菜单挡在后面 -->
+        <activity
+            android:name=".ui.KeyerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 另外三张屏与敲击台并列，靠常驻导航条来回切，所以不需要各自的桌面图标 -->
+        <activity
+            android:name=".ui.LearnActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:label="学习"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ReferenceActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:label="码表"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ConvertActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:label="转换"
+            android:screenOrientation="portrait" />
+
+        <!-- M0 遗留的诊断壳，不占桌面入口，仅 adb am start 可达 -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:label="WearMos 诊断"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

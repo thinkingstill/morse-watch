@@ -1,0 +1,29 @@
+# --- Gradle ---
+.gradle/
+build/
+app/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- 本地环境 ---
+local.properties
+.kotlin/
+captures/
+.cxx/
+
+# --- IDE ---
+.idea/
+*.iml
+*.hprof
+.DS_Store
+
+# --- 工具/助手产物（含设备串号等本机信息） ---
+.workbuddy/
+
+# --- 构建与签名产物 ---
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# --- 本地自用、不随仓库发布 ---
+docs/morse-practice-card.html

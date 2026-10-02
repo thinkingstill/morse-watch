@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FF000000</color>
+    <color name="accent">#FF97C459</color>
+    <color name="accent_bright">#FFC0DD97</color>
+    <color name="dim">#FF8A8A86</color>
+    <color name="ic_launcher_background">#FF0A0A0A</color>
+
+    <!-- 键盘与列表的键面：比背景亮一档，保证在 AMOLED 上仍能看出格子边界 -->
+    <color name="key_fill">#FF161616</color>
+    <color name="key_edge">#FF303030</color>
+    <!-- 正文色。刻意不用纯白：手表屏小、纯白在暗环境里太刺眼 -->
+    <color name="text_primary">#FFDCDCD8</color>
+    <!-- 答错反馈。用橙而非红 —— 学习场景里红得过重，容易让人不想继续 -->
+    <color name="bad">#FFD8703F</color>
+</resources>
